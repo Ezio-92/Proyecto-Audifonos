@@ -1,3 +1,6 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
 html{
     font-size: 62.5%;
     box-sizing: border-box;
@@ -9,22 +12,25 @@ html{
 
 body{
     font-size: 1.6rem;
+    font-family: v.$fuentePrincipal;
+    line-height: 1.5;
 }
 
 h1{
-    font-size: 4rem;
+    font-size: 4.4rem;
 }
 
 h2{
-    font-size: 3.2rem;
+    font-size: 3.6rem;
 }
 
 h3{
-    font-size: 2.4rem;
+    font-size: 2.8rem;
 }
 
 h1, h2, h3{
-    text-align: center;
+    font-family: v.$fuenteSecundaria;
+    
 }
 
 img{
@@ -39,5 +45,15 @@ a{
 [class$= "__contenedor"]{
     max-width: 120rem;
     margin: 0 auto;
-    width: 95%;
+    width: 90%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.degradado-verde{
+    background: linear-gradient(to right, v.$primario 0%, v.$secundario 100%);
+    background-clip: text;
+    color: transparent;
 }

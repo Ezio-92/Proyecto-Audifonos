@@ -1,0 +1,59 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.header{
+    background-color: v.$negro;
+    padding: 10rem 0;
+    color: v.$blanco;
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.header__contenido{
+    @include m.tablet { 
+        @include m.grid(2, 5rem);
+    }
+}
+
+.header__texto{
+        text-align: center;
+        padding-top: 5rem;
+
+        p{
+            margin: 0;
+        }
+
+        @include m.tablet { 
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 0;
+        }
+
+        .producto__tag{
+            font-size: 3rem;
+            font-weight: 900;
+        }
+
+        .producto__titulo{
+            font-size: 6rem;
+            margin: 0;
+
+            @include m.tablet { 
+                font-size: 10rem;
+                line-height: 1;
+            }
+        }
+
+        .producto__precio{
+
+            span{
+                font-size: 6rem;
+                font-weight: 900;
+            }
+        }
+    }
